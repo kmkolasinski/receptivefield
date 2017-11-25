@@ -9,17 +9,21 @@ useful when dealing with more complicated neural networks like
 ResNet, Inception (see notebooks) where analytical approach of 
 computing receptive fields cannot be used.
 
+# Installation
+
+* `pip install receptivefield` inside the project.
+
 # Some remarks
 
 * In order to get better results or even avoid NaNs in the 
 estimated receptive field parameters, it is suggested to 
-use `Linear` activation and `AvgPool2D` instead of `MaxPool2D`.
+use `Linear` (instead `Relu`) activation and `AvgPool2D` instead of `MaxPool2D`.
 This improves gradient flow in the network and hence better signal
-in the input image. 
+in the input image. Note, that this is required only for RF estimation.
 
 * Additionally, one may even initialize network with constant 
-positive values in all weights (positive if max pooling is used).
-For Keras API this can be obtained by setting `init_weight=True` 
+positive values in all weights (positive if max pooling is used)
+and set biases to zero. In case of Keras API this can be obtained by setting `init_weight=True` 
 in the `KerasReceptiveField(init_weight=True)` constructor.
 
 # Keras Example
