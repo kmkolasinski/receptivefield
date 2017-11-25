@@ -92,10 +92,10 @@ Trainable params: 288,544
 Non-trainable params: 0
 ```
 
-* This step is not required but it is useful to plot results on
-example image. For example you would like to see what is the size
+* This step is not required but it is useful to plot results in the
+example image. For instance you would like to see what is the size
 of network receptive field in comparision to some objects you
-wish detect (or localize).
+wish detect (or localize) by this network.
 
 ```python
 from receptivefield.image import get_default_image
@@ -107,7 +107,7 @@ plt.imshow(image)
 
 <img src="img/demo_keras_lena.jpg" width="512">
 
-* Compute receptive field of the network
+* Compute receptive field of the network by calling `rf.compute`
 
 ```python
 from receptivefield.keras import KerasReceptiveField
@@ -131,7 +131,7 @@ ReceptiveFieldDescription(offset=(17.0, 17.0), stride=(4.0, 4.0), size=Size(w=34
 
 * Input shape: `rf.input_shape==GridShape(n=None, w=96, h=96, c=3)`
 * Output feature map shape: `rf.output_shape==GridShape(n=None, w=16, h=16, c=1)`.
- Note, that number of channels in the output feature map is set to 1 and it is
+ Note, that number of channels in the output feature map is set to 1 but this is
  used internally by `receptivefield`.
  
 * You may want to see how gradients backpropagate to the input image. Here
@@ -153,7 +153,7 @@ rf.plot_rf_grid(custom_image=image, figsize=(6, 6))
 
 <img src="img/demo_keras_rf_debug.jpg" width="512">
 
-* In the above, red rectangle is the are which most top-left
+* In the above, the red rectangle corresponds to the area which top-left
 grid point is seeing in the input image. Blue rectangle corresponds
 to the central grid point, green to the bottom-right point. Green dots
 show the position of the centers of the grid anchors in the source
