@@ -2,7 +2,7 @@
 
 Gradient based receptive field estimation for Convolutional 
 Neural Networks. **receptivefield** uses backpropagation of 
-the gradients from output feature map to input image in order to  
+the gradients from output feature map to input image in order to
 estimate the size (width, height), stride and offset of resulting
 receptive field. 
 
