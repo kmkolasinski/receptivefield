@@ -98,7 +98,7 @@ image = get_default_image(shape=(32, 32), tile_factor=1)
 plt.imshow(image)
 ```
 
-<img src="img/demo_keras_lena.jpg" width="128">
+<img src="img/demo_keras_lena.jpg" width="512">
 
 * Compute receptive field of the network
 
@@ -136,7 +136,7 @@ from the output grid.
 rf.plot_gradient_at(point=(8, 8), image=None, figsize=(7, 7))
 ```
 
-![img_response](./img/demo_keras_response.jpg)
+<img src="img/demo_keras_response.jpg" width="512">
 
 * Or even plot whole receptive field grid:
 
@@ -144,7 +144,7 @@ rf.plot_gradient_at(point=(8, 8), image=None, figsize=(7, 7))
 rf.plot_rf_grid(custom_image=image, figsize=(6, 6))
 ```
 
-![img_grid](./img/demo_keras_rf_debug.jpg)
+<img src="img/demo_keras_rf_debug.jpg" width="512">
 
 * In the above, red rectangle is the are which most top-left
 grid point is seeing in the input image. Blue rectangle corresponds
