@@ -98,7 +98,7 @@ image = get_default_image(shape=(32, 32), tile_factor=1)
 plt.imshow(image)
 ```
 
-![img_lena](./img/demo_keras_lena.jpg | width=100)
+<img src="img/demo_keras_lena.jpg" width="128">
 
 * Compute receptive field of the network
 
